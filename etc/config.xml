@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2018 Stämpfli AG. All rights reserved.
+ * @author marcel.hauri@staempfli.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <cookie_consent>
+            <general>
+                <enabled>0</enabled>
+                <position>bottom</position>
+                <layout>block</layout>
+            </general>
+            <content>
+                <message>This website uses cookies to ensure you get the best experience on our website.</message>
+                <dismiss>Got it!</dismiss>
+                <deny>Decline</deny>
+                <allow>Allow cookies</allow>
+                <link_text>Learn more</link_text>
+                <link_url>https://cookiesandyou.com/</link_url>
+            </content>
+            <revoke>
+                <animate>1</animate>
+                <text>Privacy Policy</text>
+            </revoke>
+            <colors>
+                <palette_background>#6d716d</palette_background>
+                <palette_text>#f4f4f4</palette_text>
+                <button_background>#3b79c3</button_background>
+                <button_text>#f4f4f4</button_text>
+                <button_border>#3b79c3</button_border>
+            </colors>
+        </cookie_consent>
+    </default>
+</config>

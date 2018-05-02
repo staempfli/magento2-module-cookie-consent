@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2018 Stämpfli AG. All rights reserved.
+ * @author marcel.hauri@staempfli.com
+ */
+-->
+<config xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <system>
+        <tab id="staempfli_privacy" translate="label" sortOrder="1000">
+            <label>Privacy</label>
+        </tab>
+        <section id="cookie_consent" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Cookie Consent</label>
+            <tab>staempfli_privacy</tab>
+            <resource>Staempfli_CookieConsent::cookieconsent</resource>
+            <group id="general" translate="label,comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label,comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Cookie Consent</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="position" translate="label,comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Position</label>
+                    <source_model>Staempfli\CookieConsent\Model\Config\Source\Position</source_model>
+                    <comment>Position is used to describe where on the screen your cookie notice should display.</comment>
+                </field>
+                <field id="type" translate="label,comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Type</label>
+                    <source_model>Staempfli\CookieConsent\Model\Config\Source\Type</source_model>
+                    <comment>The compliance type. The standard cookie consent popup is purely informational.</comment>
+                </field>
+                <field id="layout" translate="label,comment" type="select" sortOrder="85" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Layout</label>
+                    <source_model>Staempfli\CookieConsent\Model\Config\Source\Layout</source_model>
+                </field>
+            </group>
+            <group id="content" translate="label,comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Content</label>
+                <field id="message" translate="label,comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Message</label>
+                </field>
+                <field id="dismiss" translate="label,comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Dismiss button text</label>
+                </field>
+                <field id="allow" translate="label,comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Accept button text</label>
+                    <depends>
+                        <field id="type">opt-in</field>
+                    </depends>
+                </field>
+                <field id="deny" translate="label,comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Deny button text</label>
+                    <depends>
+                        <field id="type">opt-out</field>
+                    </depends>
+                </field>
+                <field id="link_text" translate="label,comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Policy link text</label>
+                </field>
+                <field id="link_url" translate="label,comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Policy link url</label>
+                </field>
+            </group>
+            <group id="revoke" translate="label,comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Revoke Button</label>
+                <field id="animate" translate="label,comment" type="select" sortOrder="71" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Animate</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If true, the revocable button will translate in and out. Disabled by default for mobile devices.</comment>
+                </field>
+                <field id="text" translate="label,comment" type="text" sortOrder="72" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Text</label>
+                </field>
+            </group>
+            <group id="colors" translate="label,comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Colors</label>
+                <field id="palette_background" translate="label,comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Palette Background Color</label>
+                </field>
+                <field id="palette_text" translate="label,comment" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Palette Text Color</label>
+                </field>
+                <field id="button_background" translate="label,comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Button Background Color</label>
+                </field>
+                <field id="button_text" translate="label,comment" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Button Text Color</label>
+                </field>
+                <field id="button_border" translate="label,comment" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Button Border Color</label>
+                    <depends>
+                        <field id="layout">wire</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

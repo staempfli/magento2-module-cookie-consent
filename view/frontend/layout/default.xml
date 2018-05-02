@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2018 Stämpfli AG. All rights reserved.
+ * @author marcel.hauri@staempfli.com
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="head.additional">
+        <block class="Staempfli\CookieConsent\Block\CookieConsent" name="cookie.consent" template="Staempfli_CookieConsent::cookieconsent.phtml" after="-">
+            <block class="Magento\Framework\View\Element\Template" name="cookie.consent.enable" template="Staempfli_CookieConsent::cookieconsent/enable.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="cookie.consent.disable" template="Staempfli_CookieConsent::cookieconsent/disable.phtml"/>
+        </block>
+    </referenceContainer>
+</page>
