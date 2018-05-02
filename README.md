@@ -1,7 +1,7 @@
 # Magento 2 Cookie Consent  
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/15eb5843689840ac9c085e3087c97e51)](https://www.codacy.com/app/Staempfli/magento2-module-cookie-consent?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=staempfli/magento2-module-cookie-consent&amp;utm_campaign=Badge_Grade)
-[![Build Status](https://travis-ci.org/staempfli/magento2-module-cookie-conset.svg?branch=develop)](https://travis-ci.org/staempfli/magento2-module-cookie-consent)
+[![Build Status](https://travis-ci.org/staempfli/magento2-module-cookie-consent.svg?branch=develop)](https://travis-ci.org/staempfli/magento2-module-cookie-consent)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ff12a2a1ccd332635e06/maintainability)](https://codeclimate.com/github/staempfli/magento2-module-cookie-consent/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ff12a2a1ccd332635e06/test_coverage)](https://codeclimate.com/github/staempfli/magento2-module-cookie-consent/test_coverage)
 
