@@ -43,17 +43,17 @@ class Config
 
     public function isCookieConsentEnabled()
     {
-        return $this->isSetFlag(self::XML_PATH_COOKIE_CONSENT_ENABLE);
+       return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_ENABLE,  $this->storeScope);
     }
 
     public function getPosition()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_POSITION);
+      return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_POSITION,  $this->storeScope);
     }
 
     public function getType()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_TYPE);
+       return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_TYPE,  $this->storeScope);
     }
 
     public function getMessage()              
@@ -83,7 +83,7 @@ class Config
 
     public function getRevokeText()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_REVOKE_TEXT);
+       return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_REVOKE_TEXT,  $this->storeScope);
     }
 
     public function getLinkText()
@@ -98,12 +98,12 @@ class Config
 
     public function getLayout()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_LAYOUT);
+       return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_LAYOUT,  $this->storeScope);
     }
 
     public function getPaletteBackgroundColor()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_PALETTE_BACKGROUND);
+        return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_PALETTE_BACKGROUND,  $this->storeScope);
     }
 
     public function getPaletteTextColor()
