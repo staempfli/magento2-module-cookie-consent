@@ -68,12 +68,12 @@ class Config
 
     public function getAllowText()
     {
-        return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_DISMISS,  $this->storeScope);
+        return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_ALLOW,  $this->storeScope);
     }
 
     public function getDenyText()
     {
-        return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_DISMISS,  $this->storeScope);
+        return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_DENY,  $this->storeScope);
     }
 
     public function isRevokeAnimate()
