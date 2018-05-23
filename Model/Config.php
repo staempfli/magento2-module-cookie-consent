@@ -38,6 +38,7 @@ class Config
         ScopeConfigInterface $scopeConfig
     ) {
         $this->scopeConfig = $scopeConfig;
+        $this->storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORES;
     }
 
     public function isCookieConsentEnabled()
@@ -55,24 +56,24 @@ class Config
         return $this->getValue(self::XML_PATH_COOKIE_CONSENT_TYPE);
     }
 
-    public function getMessage()
-    {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_MESSAGE);
+    public function getMessage()              
+    {   	
+        return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_MESSAGE,  $this->storeScope);
     }
 
     public function getDismissText()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_DISMISS);
+        return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_DISMISS,  $this->storeScope);
     }
 
     public function getAllowText()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_ALLOW);
+        return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_DISMISS,  $this->storeScope);
     }
 
     public function getDenyText()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_DENY);
+        return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_DISMISS,  $this->storeScope);
     }
 
     public function isRevokeAnimate()
