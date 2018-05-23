@@ -88,12 +88,12 @@ class Config
 
     public function getLinkText()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_LINK_TEXT);
+       return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_LINK_TEXT,  $this->storeScope);
     }
 
     public function getLinkUrl()
     {
-        return $this->getValue(self::XML_PATH_COOKIE_CONSENT_LINK_URL);
+       return $this->scopeConfig->getValue(self::XML_PATH_COOKIE_CONSENT_LINK_URL,  $this->storeScope);
     }
 
     public function getLayout()
