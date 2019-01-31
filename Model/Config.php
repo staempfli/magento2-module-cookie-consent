@@ -8,6 +8,7 @@ declare(strict_types=1);
 namespace Staempfli\CookieConsent\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Store\Model\ScopeInterface;
 
 class Config
 {
@@ -33,11 +34,16 @@ class Config
      * @var ScopeConfigInterface
      */
     private $scopeConfig;
+    /**
+     * @var ScopeInterface
+     */
+    private $storeScope;
 
     public function __construct(
         ScopeConfigInterface $scopeConfig
     ) {
         $this->scopeConfig = $scopeConfig;
+        $this->storeScope = ScopeInterface::SCOPE_STORES;
     }
 
     public function isCookieConsentEnabled()
@@ -127,11 +133,11 @@ class Config
 
     private function getValue(string $path) : string
     {
-        return $this->scopeConfig->getValue($path) ?? '';
+        return $this->scopeConfig->getValue($path, $this->storeScope) ?? '';
     }
 
     private function isSetFlag(string $path) : bool
     {
-        return (bool) $this->scopeConfig->isSetFlag($path);
+        return (bool) $this->scopeConfig->isSetFlag($path, $this->storeScope);
     }
 }
