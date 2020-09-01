@@ -18,8 +18,8 @@ composer require staempfli/magento2-module-cookie-consent
   
 ## Requirements  
   
-- PHP: 7.0.x | 7.1.x  
-- Magento 2.1.x | 2.2.x | 2.3.x  
+- PHP: 7.0.x | 7.1.x  | 7.2.x | 7.3.x
+- Magento 2.1.x | 2.2.x | 2.3.x | 2.4.x
   
 Support  
 -------  
